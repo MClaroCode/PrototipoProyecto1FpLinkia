@@ -1,0 +1,22 @@
+{
+  "nombre": "Ejemplo JSON",
+  "descripcion": "Este es un JSON inventado para propósitos de demostración",
+  "fecha_creacion": "2024-02-22",
+  "elementos": [
+    {
+      "id": 1,
+      "nombre": "Elemento 1",
+      "tipo": "Tipo A"
+    },
+    {
+      "id": 2,
+      "nombre": "Elemento 2",
+      "tipo": "Tipo B"
+    },
+    {
+      "id": 3,
+      "nombre": "Elemento 3",
+      "tipo": "Tipo A"
+    }
+  ]
+}

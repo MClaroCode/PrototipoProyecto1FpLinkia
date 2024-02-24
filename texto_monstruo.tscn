@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://wlbo7epb2mli"]
+
+[node name="TextoMonstruo" type="TextEdit"]
+offset_right = 298.0
+offset_bottom = 128.0

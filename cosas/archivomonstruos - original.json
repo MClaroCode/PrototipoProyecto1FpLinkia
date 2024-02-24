@@ -1,0 +1,58 @@
+{
+  "monstruos": [
+    {
+      "nombre": "Gorgo",
+      "aspecto": "gorgo.png",
+      "fecha_descubrimiento": "2023-05-10",
+      "derrotado": false
+    },
+    {
+      "nombre": "Kraken",
+      "aspecto": "kraken.png",
+      "fecha_descubrimiento": "2022-11-28",
+      "derrotado": true
+    },
+    {
+      "nombre": "Basilisco",
+      "aspecto": "basilisco.png",
+      "fecha_descubrimiento": "2024-01-15",
+      "derrotado": false
+    },
+    {
+      "nombre": "Minotauro",
+      "aspecto": "minotauro.png",
+      "fecha_descubrimiento": "2023-08-20",
+      "derrotado": false
+    },
+    {
+      "nombre": "Quimera",
+      "aspecto": "quimera.png",
+      "fecha_descubrimiento": "2022-09-05",
+      "derrotado": true
+    },
+    {
+      "nombre": "Cerbero",
+      "aspecto": "cerbero.png",
+      "fecha_descubrimiento": "2023-10-31",
+      "derrotado": false
+    },
+    {
+      "nombre": "Hidra",
+      "aspecto": "hidra.png",
+      "fecha_descubrimiento": "2024-02-02",
+      "derrotado": false
+    },
+    {
+      "nombre": "Esfinge",
+      "aspecto": "esfinge.png",
+      "fecha_descubrimiento": "2022-12-25",
+      "derrotado": true
+    },
+    {
+      "nombre": "Fénix",
+      "aspecto": "fenix.png",
+      "fecha_descubrimiento": "2023-04-14",
+      "derrotado": false
+    }
+  ]
+}
