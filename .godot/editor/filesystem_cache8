@@ -1,12 +1,12 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708764474
+::res://::1708765092
 export_presets.cfg::TextFile::-1::1708595169::0::1::::<><>::
 icon.svg::CompressedTexture2D::8172161918799779284::1708539843::1708539852::1::::<><>::
 intento1.gd::GDScript::-1::1708716964::0::1::::<>Node2D<>::
 intento_1.tscn::PackedScene::1347649280303176453::1708717405::0::1::::<><>::res://intento1.gd<>uid://wlbo7epb2mli::::res://texto_monstruo.tscn
 texto_monstruo.gltf::PackedScene::6472790497278779815::1708594226::1708594226::1::::<><>::
 texto_monstruo.tscn::PackedScene::1566950121049170422::1708717405::0::1::::<><>::
-::res://cosas/::1708607164
+::res://cosas/::1708764935
 archivomonstruos - original.json::JSON::-1::1708595030::0::1::::<><>::
 archivomonstruos.json::JSON::-1::1708717442::0::1::::<><>::
 json2raro.json::JSON::-1::1708607158::0::1::::<><>::
