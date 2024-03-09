@@ -49,16 +49,24 @@ func load_file(filePath : String):
 
 func crear_textos(monstruos):
 	var size = monstruos.size()
-	var posicion = Vector2(50,50)
+	var posicion = Vector2(50, 50)
 	for j in monstruos.size():
 		var text_monstruo = texto_monstruo_scene.instantiate()
 		v_box_container.add_child(text_monstruo)
 		text_monstruo.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		text_monstruo.global_position = posicion
-		#posicion += Vector2(300,0)
+# Crear un HBoxContainer para contener el texto del monstruo y la casilla de verificación
+		var hbox = HBoxContainer.new()
+		text_monstruo.add_child(hbox)
+		# Agregar la casilla de verificación
+		var checkbox = CheckBox.new()
+		hbox.add_child(checkbox)
+
 		textos_array.append(text_monstruo)
-		text_monstruo.text = monstruos[j]["nombre"]+ "\n" + monstruos[j]["aspecto"] +  "\n" + monstruos[j]["fecha_descubrimiento"]
-		if( posicion.x >899):
+		
+		text_monstruo.text = monstruos[j]["nombre"] + "\n" + monstruos[j]["aspecto"] + "\n" + monstruos[j]["fecha_descubrimiento"]
+
+		if posicion.x > 899:
 			posicion.x = 50
 			posicion.y += 250
 	
@@ -98,18 +106,29 @@ func _on_button_pressed():
 		dataFile.store_string(json_text)
 		dataFile.close()
 		
-		
-		
-		#for j in monstruo_array.size():
-			#var lineas = textos_array[j].text.split("\n")
-			#print(lineas[0])
-			#print(lineas[1])
-			#print(lineas[2])
-			#monstruo_array[j]["nombre"] = lineas[0]
-			#monstruo_array[j]["aspecto"] = lineas[1]
-			#monstruo_array[j]["fecha_descubrimiento"] = lineas[2]
-			#print(monstruo_array[j])
-			#
-		#var json_text = JSON.stringify(monstruo_array,"\n")
-		#dataFile.store_string(json_text)
-		#dataFile.close()
+
+
+
+
+func _on_eliminar_pressed():
+	# Crear una lista para almacenar los índices de los monstruos seleccionados para eliminar
+	var indices_a_eliminar = []
+
+	# Recorrer los textos y checkboxes para identificar los monstruos seleccionados
+	for i in range(textos_array.size()):
+		var hbox = textos_array[i].get_child(0)  # Obtener el primer hijo que es el HBoxContainer
+		var checkbox = hbox.get_child(0)  # Obtener el primer hijo del HBoxContainer que es el CheckBox
+		if checkbox.is_pressed():
+			indices_a_eliminar.append(i)
+
+	# Eliminar los monstruos seleccionados de la lista y del contenedor visual
+	for indice in indices_a_eliminar:
+		monstruo_array.remove_at(indice)  # Elimina el monstruo de la lista que irá en el JSON cuando se guarde
+		var texto_monstruo = textos_array[indice]  # textos_array es la lista visual de monstruos
+		texto_monstruo.queue_free()  # Liberar el nodo del texto_monstruo
+
+	# Limpiar la lista de textos después de eliminar los monstruos
+	textos_array.clear()
+
+	# Recrear los textos con los monstruos restantes
+	crear_textos(monstruo_array)
