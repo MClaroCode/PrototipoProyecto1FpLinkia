@@ -1,2 +1,10 @@
-res://intento_1.tscn::288c372c215a6952f061c506190e5038::1708769284::res://.godot/exported/133200997/export-b5c405d381f585e68e07519f06b29992-intento_1.scn
-res://texto_monstruo.tscn::a5dc60420cd50e1525f7cb7fd83ee360::1708769284::res://.godot/exported/133200997/export-57b47d4ba9017181849915c907a6c726-texto_monstruo.scn
+res://intento_1.tscn::15a72c95ccff569edbbf53859da89464::1709317725::res://.godot/exported/133200997/export-b5c405d381f585e68e07519f06b29992-intento_1.scn
+res://texto_monstruo.tscn::ae0db8b91e24ec77b2ed08ecb8d09f17::1710106854::res://.godot/exported/133200997/export-57b47d4ba9017181849915c907a6c726-texto_monstruo.scn
+res://assets/fonts/font_variation.tres::6857b32cb06f398b830f424f8e3706d4::1710087766::res://.godot/exported/133200997/export-a357eb0394a8c466487d1eaad31b842f-font_variation.res
+res://assets/themes/monster_field_theme.tres::873890f9337ab7d5595658c794dff509::1710087766::res://.godot/exported/133200997/export-735f18b29c6cb327fcde5dc1673698eb-monster_field_theme.res
+res://assets/themes/new_style_box_texture.tres::bb1f7b151a7eb0594c652a5e3ef2807b::1710106245::res://.godot/exported/133200997/export-def3a3d33f146212a49cc85be86a0129-new_style_box_texture.res
+res://menus/DataEditor.tscn::d36c4aaed5258d8ef3fb7c0ef87dc5f7::1710106854::res://.godot/exported/133200997/export-234706b82c74652cb8f4667cb5867ff6-DataEditor.scn
+res://menus/MainMenu.tscn::d22a30a6509bf963ae39fb58e7fa0864::1710108863::res://.godot/exported/133200997/export-818dc4ec707e2c2ac05a10d358cfbfc3-MainMenu.scn
+res://menus/MenuHolder.tscn::85b5cdf8d18efe22841a4632c7d371bd::1710106854::res://.godot/exported/133200997/export-ae3ce8b80110dabd2d4868171999a34a-MenuHolder.scn
+res://data_editor.tscn::298100a33be6feba6bc59f6fca854021::1710087766::res://.godot/exported/133200997/export-6575940a9e7cc5b0f4b20100213526f1-data_editor.scn
+res://monstruo_lista.tscn::ffe3ad8f53ca1771865bdeec4f4e2df0::1709317177::res://.godot/exported/133200997/export-880d05a7d0200263ac5243b9f491456c-monstruo_lista.scn

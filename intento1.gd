@@ -163,23 +163,48 @@ func _on_add_button_pressed():
 	
 	
 
-
 func _on_restore_button_pressed():
-	monstruo_array.clear()
-	item_Data = load_file(archivos_originales_path)
-	if "monstruos" in item_Data:
-		var monstruos = item_Data["monstruos"]
-		
-		for monstruo in monstruos:
-			monstruo_array.append((monstruo))
-			
-			
-	else:
-		print("Key 'nombre' not found in the JSON data.")
-
-
+	clear_textos()
+	monstruo_array = load_file(archivos_originales_path)["monstruos"]
 	crear_textos(monstruo_array)
-
-
+	for j in monstruo_array.size():
+		var nameLineEdit = textos_array[j].nameLineEdit
+		var descriptionTextEdit = textos_array[j].descriptionTextEdit
+		var dateLabel = textos_array[j].dateLabel
+		monstruo_array[j]["nombre"] = nameLineEdit.text
+		monstruo_array[j]["aspecto"] = descriptionTextEdit.text
+		monstruo_array[j]["fecha_descubrimiento"] = dateLabel.text
+	if FileAccess.file_exists(data_file_path):
+		var dataFile = FileAccess.open(data_file_path,FileAccess.WRITE)
+		var json_text
+		var json_data = {
+			"monstruos": []
+			}
+		for monstruo in monstruo_array:
+			var nuevo_monstruo = {
+					"nombre": monstruo["nombre"],
+					"aspecto": monstruo["aspecto"],
+					"fecha_descubrimiento": monstruo["fecha_descubrimiento"],
+					"derrotado": monstruo["derrotado"]
+					
+				}
+			
+			
+			
+			json_data["monstruos"].append(nuevo_monstruo)
+			json_text = JSON.stringify(json_data)
+			
+			
+			
+			
+		dataFile.store_string(json_text)
+		dataFile.close()
+		print("guardado con exito")
+	
 func _on_exit_button_pressed():
 	get_tree().quit()
+	
+func clear_textos():
+	for texto in textos_array:
+		texto.queue_free()
+		textos_array.clear()
