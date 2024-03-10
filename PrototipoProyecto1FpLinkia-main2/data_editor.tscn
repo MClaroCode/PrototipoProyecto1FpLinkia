@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://d12i2wn2ewdg1"]
+
+[ext_resource type="Script" path="res://menus/DataEditor.gd" id="1_dnxdx"]
+[ext_resource type="PackedScene" uid="uid://wlbo7epb2mli" path="res://texto_monstruo.tscn" id="2_w31xf"]
+
+[node name="DataEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_dnxdx")
+texto_monstruo_scene = ExtResource("2_w31xf")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 0
+offset_right = 360.0
+offset_bottom = 800.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.113725, 0.129412, 0.12549, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/ScrollContainer"]
+layout_mode = 2
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 93.0
+offset_top = 345.0
+offset_right = 176.0
+offset_bottom = 399.0
+text = "DatePrint
+
+"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 293.0
+offset_right = 180.0
+offset_bottom = 345.0
+text = "Guardar cambios
+"

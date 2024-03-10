@@ -1,0 +1,8 @@
+[gd_resource type="FontVariation" load_steps=2 format=3 uid="uid://br5f6irfmscfu"]
+
+[ext_resource type="FontFile" uid="uid://q0gtwk55gaxy" path="res://assets/fonts/monogram.ttf" id="1_5g4fo"]
+
+[resource]
+base_font = ExtResource("1_5g4fo")
+spacing_top = -4
+spacing_bottom = -4

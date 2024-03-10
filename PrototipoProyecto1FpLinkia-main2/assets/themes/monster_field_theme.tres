@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://mpg7aqwxxnq2"]
+
+[ext_resource type="StyleBox" uid="uid://cj3rhq77usoom" path="res://assets/themes/new_style_box_texture.tres" id="1_a0rxg"]
+[ext_resource type="FontFile" uid="uid://cyv85h5827vi8" path="res://assets/fonts/monogram-extended.ttf" id="1_xja6e"]
+[ext_resource type="FontVariation" uid="uid://br5f6irfmscfu" path="res://assets/fonts/font_variation.tres" id="2_wasij"]
+
+[resource]
+default_font = ExtResource("1_xja6e")
+/styles/stylebox = ExtResource("1_a0rxg")
+Fonts/fonts/large = ExtResource("2_wasij")
