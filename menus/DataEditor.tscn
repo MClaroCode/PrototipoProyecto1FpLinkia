@@ -14,8 +14,9 @@ script = ExtResource("1_l31hq")
 texto_monstruo_scene = ExtResource("2_476wx")
 
 [node name="Popup" type="Window" parent="."]
+mode = 3
 position = Vector2i(12, 0)
-size = Vector2i(336, 558)
+size = Vector2i(336, 584)
 borderless = true
 
 [node name="VBoxContainer2" type="VBoxContainer" parent="Popup"]
@@ -70,8 +71,15 @@ theme = ExtResource("3_ebqhy")
 theme_override_styles/normal = ExtResource("4_gaw8i")
 text = "Restaurar"
 
+[node name="ExitButton" type="Button" parent="Popup/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_ebqhy")
+theme_override_styles/normal = ExtResource("4_gaw8i")
+text = "Salir"
+
 [connection signal="pressed" from="Popup/VBoxContainer2/SaveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_button_pressed_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_add_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/DeleteButton" to="." method="_on_delete_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/RestoreButton" to="." method="_on_restore_button_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]

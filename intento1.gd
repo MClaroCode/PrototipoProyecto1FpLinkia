@@ -179,3 +179,7 @@ func _on_restore_button_pressed():
 
 
 	crear_textos(monstruo_array)
+
+
+func _on_exit_button_pressed():
+	get_tree().quit()
