@@ -22,18 +22,11 @@ func _ready():
 		
 		for monstruo in monstruos:
 			monstruo_array.append((monstruo))
-			var nombre = monstruo["nombre"]
-			var derrota = str(monstruo["derrotado"])
-			print("Nombre del monstruo:", nombre," ¿Le has partido la cara? ", derrota)
+			
 			
 	else:
 		print("Key 'nombre' not found in the JSON data.")
-	print("---------------------------------------------")
-	print(monstruo_array[0])
-	
 
-	var primer_m = monstruo_array[0]
-	print(primer_m is Dictionary)
 
 	crear_textos(monstruo_array)
 	
@@ -42,8 +35,6 @@ func load_file(filePath : String):
 	if FileAccess.file_exists(filePath):
 		var dataFile = FileAccess.open(filePath,FileAccess.READ)
 		var parseResult = JSON.parse_string(dataFile.get_as_text())
-		print(parseResult)
-		print( parseResult is Dictionary)
 		return parseResult
 	else :
 		print("no esta")
@@ -90,16 +81,15 @@ func _on_button_pressed():
 					"derrotado": monstruo["derrotado"]
 					
 				}
-			print("nuevomonstruoprint")
 			
-			print(nuevo_monstruo)
+			
+			
 			json_data["monstruos"].append(nuevo_monstruo)
-			print(json_data)
 			json_text = JSON.stringify(json_data)
-			print("-----------------------------------------------------------------------------")
-			print(json_text)
 			
-			#dataFile.store_string("\n")
+			
+			
+			
 		dataFile.store_string(json_text)
 		dataFile.close()
 		
@@ -154,9 +144,21 @@ func _on_delete_button_pressed():
 
 
 func _on_add_button_pressed():
+	var nuevo_monstruo = {
+		"nombre": "Nuevo Monstruo",
+		"aspecto": "Descripción del nuevo monstruo",
+		"fecha_descubrimiento": getDateString(),
+		"derrotado": false
+	}
+	monstruo_array.append(nuevo_monstruo)
 	var text_monstruo = texto_monstruo_scene.instantiate()
-	v_box_container.add_child(text_monstruo)
 	
-	text_monstruo.dateLabel.text = getDateString()
+	
+	v_box_container.add_child(text_monstruo)
+	text_monstruo.nameLineEdit.text = nuevo_monstruo["nombre"]
+	text_monstruo.descriptionTextEdit.text = nuevo_monstruo["aspecto"]
+	text_monstruo.dateLabel.text = nuevo_monstruo["fecha_descubrimiento"]
 	textos_array.append(text_monstruo)
-	monstruo_array.append(text_monstruo)
+	
+	
+	
