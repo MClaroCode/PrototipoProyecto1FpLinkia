@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=3 uid="uid://tg2t7jyt1hbh"]
+
+[ext_resource type="Script" path="res://intento1.gd" id="1_l31hq"]
+[ext_resource type="PackedScene" uid="uid://wlbo7epb2mli" path="res://texto_monstruo.tscn" id="2_476wx"]
+[ext_resource type="Theme" uid="uid://mpg7aqwxxnq2" path="res://assets/themes/monster_field_theme.tres" id="3_ebqhy"]
+[ext_resource type="StyleBox" uid="uid://cj3rhq77usoom" path="res://assets/themes/new_style_box_texture.tres" id="4_gaw8i"]
+
+[node name="DataEditor" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_l31hq")
+texto_monstruo_scene = ExtResource("2_476wx")
+
+[node name="Popup" type="Window" parent="."]
+position = Vector2i(12, 0)
+size = Vector2i(336, 534)
+borderless = true
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Popup"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 332.0
+offset_bottom = 530.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Popup/VBoxContainer2"]
+clip_contents = false
+custom_minimum_size = Vector2(300, 420)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("3_ebqhy")
+follow_focus = true
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Popup/VBoxContainer2/ScrollContainer"]
+custom_minimum_size = Vector2(0, 420)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme = ExtResource("3_ebqhy")
+theme_override_constants/separation = 2
+
+[node name="SaveButton" type="Button" parent="Popup/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_ebqhy")
+theme_override_styles/normal = ExtResource("4_gaw8i")
+text = "Guardar cambios
+"
+
+[node name="AddButton" type="Button" parent="Popup/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_ebqhy")
+theme_override_styles/normal = ExtResource("4_gaw8i")
+text = "Añadir
+
+"
+
+[node name="DeleteButton" type="Button" parent="Popup/VBoxContainer2"]
+layout_mode = 2
+theme = ExtResource("3_ebqhy")
+theme_override_styles/normal = ExtResource("4_gaw8i")
+text = "Borrar"
+
+[connection signal="pressed" from="Popup/VBoxContainer2/SaveButton" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_button_pressed_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer2/DeleteButton" to="." method="_on_delete_button_pressed"]

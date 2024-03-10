@@ -1,9 +1,2 @@
-Label
-VBoxContainer
-ScrollContainer
-Container
-VScrollBar
+Window
 Button
-TextEdit
-CollisionShape2D
-RigidBody2D

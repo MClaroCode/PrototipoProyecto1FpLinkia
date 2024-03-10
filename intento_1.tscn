@@ -36,51 +36,10 @@ offset_top = 106.0
 offset_right = 1982.0
 offset_bottom = 413.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer2"]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="Label" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-text = "asdasda"
-
-[node name="Label2" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-text = "asdasda"
-
-[node name="Label3" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label6" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label7" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label8" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label9" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label10" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label11" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label12" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label13" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-text = "sdasdasdasda"
-
-[node name="Label4" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
-
-[node name="Label5" type="Label" parent="ScrollContainer2/VBoxContainer"]
-layout_mode = 2
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 1273.0
+offset_top = 17.0
+offset_right = 1847.0
+offset_bottom = 393.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

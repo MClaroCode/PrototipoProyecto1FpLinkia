@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1hkpib7iwe8e"]
+
+[ext_resource type="Texture2D" uid="uid://doowkvvwpkj8o" path="res://icon.svg" id="1_mw2pn"]
+
+[node name="MonstruoLista" type="ItemList"]
+offset_left = -1.0
+offset_top = -2.0
+offset_right = 601.0
+offset_bottom = 288.0
+item_count = 1
+item_0/text = "addadad "
+item_0/icon = ExtResource("1_mw2pn")
