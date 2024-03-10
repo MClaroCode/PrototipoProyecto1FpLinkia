@@ -60,7 +60,7 @@ func crear_textos(monstruos):
 		v_box_container.add_child(text_monstruo)
 		text_monstruo.size_flags_vertical = Control.SIZE_EXPAND_FILL
 		
-		#posicion += Vector2(300,0)
+		
 		textos_array.append(text_monstruo)
 		text_monstruo.nameLineEdit.text = monstruos[j]["nombre"]
 		text_monstruo.descriptionTextEdit.text = monstruos[j]["aspecto"]
@@ -131,7 +131,7 @@ func _on_delete_button_pressed():
 
 	# Recorrer los textos y checkboxes para identificar los monstruos seleccionados
 	
-	for i in textos_array.size():
+	for i in range(textos_array.size() - 1, -1, -1):
 		
 		var checkbox = textos_array[i].deleteCheck.is_pressed() # Obtener el primer hijo del HBoxContainer que es el CheckBox
 		if checkbox:
@@ -150,3 +150,9 @@ func _on_delete_button_pressed():
 
 	# Recrear los textos con los monstruos restantes
 	crear_textos(monstruo_array)
+
+
+func _on_add_button_pressed():
+	var text_monstruo = texto_monstruo_scene.instantiate()
+	v_box_container.add_child(text_monstruo)
+	textos_array.append(text_monstruo)

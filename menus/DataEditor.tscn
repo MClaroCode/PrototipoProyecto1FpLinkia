@@ -66,4 +66,5 @@ text = "Borrar"
 
 [connection signal="pressed" from="Popup/VBoxContainer2/SaveButton" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_button_pressed_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_add_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/DeleteButton" to="." method="_on_delete_button_pressed"]
