@@ -5,7 +5,7 @@ extends Control
 
 @onready var v_box_container = $Popup/VBoxContainer2/ScrollContainer/VBoxContainer
 
-
+var archivos_originales_path = "res://cosas/archivomonstruos - original.json"
 var item_Data = {}
 var data_file_path = "res://cosas/archivomonstruos.json"
 var monstruo_array = []
@@ -92,7 +92,7 @@ func _on_button_pressed():
 			
 		dataFile.store_string(json_text)
 		dataFile.close()
-		
+		print("guardado con exito")
 		
 		#for j in monstruo_array.size():
 			#var lineas = textos_array[j].text.split("\n")
@@ -162,3 +162,20 @@ func _on_add_button_pressed():
 	
 	
 	
+
+
+func _on_restore_button_pressed():
+	monstruo_array.clear()
+	item_Data = load_file(archivos_originales_path)
+	if "monstruos" in item_Data:
+		var monstruos = item_Data["monstruos"]
+		
+		for monstruo in monstruos:
+			monstruo_array.append((monstruo))
+			
+			
+	else:
+		print("Key 'nombre' not found in the JSON data.")
+
+
+	crear_textos(monstruo_array)

@@ -3,3 +3,4 @@ res://texto_monstruo.tscn
 res://menus/MainMenu.tscn
 res://menus/DataEditor.tscn
 res://intento1.gd
+res://assets/themes/new_style_box_texture.tres
