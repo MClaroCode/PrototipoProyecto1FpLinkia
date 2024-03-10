@@ -121,7 +121,8 @@ func _on_button_pressed():
 #Devuelve una string con los datos necesarios de la fecha y hora formateados
 func getDateString():
 	var date = Time.get_datetime_dict_from_system()
-	var stringDate = date["year"] + "-" + date["year"] + "-" + date["day"] + " " + date["hour"] + ":" + date["minute"]
+	var stringDate2 = str(date)
+	var stringDate = str(date["year"]) + "-" + str(date["year"]) + "-" + str(date["day"]) + " " + str(date["hour"]) + ":" + str(date["minute"])
 	return stringDate
 
 
@@ -155,4 +156,6 @@ func _on_delete_button_pressed():
 func _on_add_button_pressed():
 	var text_monstruo = texto_monstruo_scene.instantiate()
 	v_box_container.add_child(text_monstruo)
+	
+	text_monstruo.dateLabel.text = getDateString()
 	textos_array.append(text_monstruo)
