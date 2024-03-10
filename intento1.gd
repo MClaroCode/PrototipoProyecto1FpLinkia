@@ -159,3 +159,4 @@ func _on_add_button_pressed():
 	
 	text_monstruo.dateLabel.text = getDateString()
 	textos_array.append(text_monstruo)
+	monstruo_array.append(text_monstruo)
