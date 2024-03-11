@@ -1,0 +1,49 @@
+[gd_scene load_steps=4 format=3 uid="uid://wlbo7epb2mli"]
+
+[ext_resource type="Theme" uid="uid://mpg7aqwxxnq2" path="res://assets/themes/monster_field_theme.tres" id="1_n7eyy"]
+[ext_resource type="StyleBox" uid="uid://cj3rhq77usoom" path="res://assets/themes/new_style_box_texture.tres" id="2_e2r1q"]
+[ext_resource type="Script" path="res://texto_monstruo.gd" id="3_va6xn"]
+
+[node name="TextoMonstruo" type="PanelContainer" node_paths=PackedStringArray("nameLineEdit", "descriptionTextEdit", "dateLabel")]
+custom_minimum_size = Vector2(300, 0)
+offset_right = 182.0
+offset_bottom = 128.0
+theme = ExtResource("1_n7eyy")
+theme_override_styles/panel = ExtResource("2_e2r1q")
+script = ExtResource("3_va6xn")
+nameLineEdit = NodePath("VBoxContainer/NameLineEdit")
+descriptionTextEdit = NodePath("VBoxContainer/DescriptionTextEdit")
+dateLabel = NodePath("VBoxContainer/HBoxContainer/Date")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="NameLineEdit" type="LineEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+size_flags_vertical = 0
+placeholder_text = "Name"
+
+[node name="DescriptionTextEdit" type="TextEdit" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+placeholder_text = "Description
+"
+scroll_fit_content_height = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Date" type="Label" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(228, 0)
+layout_mode = 2
+text = "000-00-00 00:00"
+
+[node name="DeleteLabel" type="Label" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Borrar
+"
+
+[node name="CheckBox" type="CheckBox" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
