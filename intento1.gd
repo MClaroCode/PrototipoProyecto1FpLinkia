@@ -112,7 +112,7 @@ func _on_button_pressed():
 func getDateString():
 	var date = Time.get_datetime_dict_from_system()
 	var stringDate2 = str(date)
-	var stringDate = str(date["year"]) + "-" + str(date["year"]) + "-" + str(date["day"]) + " " + str(date["hour"]) + ":" + str(date["minute"])
+	var stringDate = str(date["year"]) + "-" + str(date["month"]) + "-" + str(date["day"]) + " " + str(date["hour"]) + ":" + str(date["minute"])
 	return stringDate
 
 

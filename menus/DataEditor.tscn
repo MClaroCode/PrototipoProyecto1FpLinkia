@@ -78,8 +78,8 @@ theme_override_styles/normal = ExtResource("4_gaw8i")
 text = "Salir"
 
 [connection signal="pressed" from="Popup/VBoxContainer2/SaveButton" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_button_pressed_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_add_button_pressed"]
+[connection signal="pressed" from="Popup/VBoxContainer2/AddButton" to="." method="_on_button_pressed_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/DeleteButton" to="." method="_on_delete_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/RestoreButton" to="." method="_on_restore_button_pressed"]
 [connection signal="pressed" from="Popup/VBoxContainer2/ExitButton" to="." method="_on_exit_button_pressed"]
